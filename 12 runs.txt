@@ -1,0 +1,1519 @@
+Last login: Tue Oct 31 09:05:14 on ttys001
+Screeenshare:Forest Fire kiranganeshan$ git add
+fatal: Not a git repository (or any of the parent directories): .git
+Screeenshare:Forest Fire kiranganeshan$ git add fire.c
+fatal: Not a git repository (or any of the parent directories): .git
+Screeenshare:Forest Fire kiranganeshan$ git repo
+git: 'repo' is not a git command. See 'git --help'.
+
+The most similar commands are
+	grep
+	reflog
+	remote
+	repack
+Screeenshare:Forest Fire kiranganeshan$ git init
+Initialized empty Git repository in /Users/kiranganeshan/Documents/Parallel/Forest Fire/.git/
+Screeenshare:Forest Fire kiranganeshan$ git add fire.c
+Screeenshare:Forest Fire kiranganeshan$ git commit
+error: There was a problem with the editor 'vi'.
+Please supply the message using either -m or -F option.
+Screeenshare:Forest Fire kiranganeshan$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+Screeenshare:Forest Fire kiranganeshan$ git push origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'origin'
+Screeenshare:Forest Fire kiranganeshan$ git remote add origin https://github.com/kimcity/Fire.git
+Screeenshare:Forest Fire kiranganeshan$ git push -u origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/kimcity/Fire.git'
+Screeenshare:Forest Fire kiranganeshan$ git push origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/kimcity/Fire.git'
+Screeenshare:Forest Fire kiranganeshan$ echo "# Fire" >> README.md
+Screeenshare:Forest Fire kiranganeshan$ git init
+Reinitialized existing Git repository in /Users/kiranganeshan/Documents/Parallel/Forest Fire/.git/
+Screeenshare:Forest Fire kiranganeshan$ git add README.md
+Screeenshare:Forest Fire kiranganeshan$ git commit -m "first commit"
+[master (root-commit) 0532640] first commit
+ 2 files changed, 242 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 fire.c
+Screeenshare:Forest Fire kiranganeshan$ git remote add origin https://github.com/kimcity/Fire.git
+fatal: remote origin already exists.
+Screeenshare:Forest Fire kiranganeshan$ git push -u origin master
+remote: Permission to kimcity/Fire.git denied to kiranganeshan.
+fatal: unable to access 'https://github.com/kimcity/Fire.git/': The requested URL returned error: 403
+Screeenshare:Forest Fire kiranganeshan$ clear
+
+Screeenshare:Forest Fire kiranganeshan$ git init
+Reinitialized existing Git repository in /Users/kiranganeshan/Documents/Parallel/Forest Fire/.git/
+Screeenshare:Forest Fire kiranganeshan$ git add README.md
+Screeenshare:Forest Fire kiranganeshan$ git commit fire.c -m "fire"
+On branch master
+Untracked files:
+	fire
+	fire_1sim
+	fire_1sim.c
+	fire_multsim.c
+	fire_saved
+	fire_serial
+	fire_serialbase
+	hello
+	hello.c
+	out.txt
+	parallel_demo.c
+	plot.gnu
+	plot.png
+	plot1.png
+
+nothing added to commit but untracked files present
+Screeenshare:Forest Fire kiranganeshan$ git add fire.c
+Screeenshare:Forest Fire kiranganeshan$ git commit -m "fire"
+On branch master
+Untracked files:
+	fire
+	fire_1sim
+	fire_1sim.c
+	fire_multsim.c
+	fire_saved
+	fire_serial
+	fire_serialbase
+	hello
+	hello.c
+	out.txt
+	parallel_demo.c
+	plot.gnu
+	plot.png
+	plot1.png
+
+nothing added to commit but untracked files present
+Screeenshare:Forest Fire kiranganeshan$ git commit add origin https://github.com/kimcity/Fire.git
+error: pathspec 'add' did not match any file(s) known to git.
+error: pathspec 'origin' did not match any file(s) known to git.
+error: pathspec 'https://github.com/kimcity/Fire.git' did not match any file(s) known to git.
+Screeenshare:Forest Fire kiranganeshan$ git remote add origin https://github.com/kimcity/Fire.git
+fatal: remote origin already exists.
+Screeenshare:Forest Fire kiranganeshan$ git push origin master
+remote: Permission to kimcity/Fire.git denied to kiranganeshan.
+fatal: unable to access 'https://github.com/kimcity/Fire.git/': The requested URL returned error: 403
+Screeenshare:Forest Fire kiranganeshan$ git push origin
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+Screeenshare:Forest Fire kiranganeshan$ git push origin master
+remote: Permission to kimcity/Fire.git denied to kiranganeshan.
+fatal: unable to access 'https://github.com/kimcity/Fire.git/': The requested URL returned error: 403
+Screeenshare:Forest Fire kiranganeshan$ ./fire_serialbase
+36.207626
+Screeenshare:Forest Fire kiranganeshan$ ssh 2019kganesha@remote.tjhsst.edu
+ ______  _____  __  __  ____    ____    ______      ____     ____    __
+/\__  _\/\___ \/\ \/\ \/\  _`\ /\  _`\ /\__  _\    /\  _`\  /\  _`\ /\ \
+\/_/\ \/\/__/\ \ \ \_\ \ \,\L\_\ \,\L\_\/_/\ \/    \ \ \/\_\\ \,\L\_\ \ \
+   \ \ \   _\ \ \ \  _  \/_\__ \\/_\__ \  \ \ \     \ \ \/_/_\/_\__ \\ \ \  __
+    \ \ \ /\ \_\ \ \ \ \ \/\ \L\ \/\ \L\ \ \ \ \     \ \ \L\ \ /\ \L\ \ \ \L\ \
+     \ \_\\ \____/\ \_\ \_\ `\____\ `\____\ \ \_\     \ \____/ \ `\____\ \____/
+      \/_/ \/___/  \/_/\/_/\/_____/\/_____/  \/_/      \/___/   \/_____/\/___/
+
+ You are accessing the TJHSST Computer Systems Lab
+
+ Unauthorized access will result in prosecution. By proceeding, you CONSENT to
+ having all activity monitored and logged. If you do not agree to these terms,
+ please disconnect immediately.
+
+2019kganesha@remote.tjhsst.edu's password: 
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-97-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+Last login: Tue Oct 31 09:03:30 2017 from 151.188.227.237
+2019kganesha@ras2:~$ ssh hartmanis
+ ______  _____  __  __  ____    ____    ______      ____     ____    __
+/\__  _\/\___ \/\ \/\ \/\  _`\ /\  _`\ /\__  _\    /\  _`\  /\  _`\ /\ \
+\/_/\ \/\/__/\ \ \ \_\ \ \,\L\_\ \,\L\_\/_/\ \/    \ \ \/\_\\ \,\L\_\ \ \
+   \ \ \   _\ \ \ \  _  \/_\__ \\/_\__ \  \ \ \     \ \ \/_/_\/_\__ \\ \ \  __
+    \ \ \ /\ \_\ \ \ \ \ \/\ \L\ \/\ \L\ \ \ \ \     \ \ \L\ \ /\ \L\ \ \ \L\ \
+     \ \_\\ \____/\ \_\ \_\ `\____\ `\____\ \ \_\     \ \____/ \ `\____\ \____/
+      \/_/ \/___/  \/_/\/_/\/_____/\/_____/  \/_/      \/___/   \/_____/\/___/
+
+ You are accessing the TJHSST Computer Systems Lab
+
+ Unauthorized access will result in prosecution. By proceeding, you CONSENT to
+ having all activity monitored and logged. If you do not agree to these terms,
+ please disconnect immediately.
+
+2019kganesha@hartmanis's password: 
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-96-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+177 packages can be updated.
+64 updates are security updates.
+
+
+Last login: Tue Oct 31 12:05:06 2017 from 198.38.18.200
+2019kganesha@hartmanis:~$ nano fire.c
+2019kganesha@hartmanis:~$ ls 
+Parallel  yesterday
+2019kganesha@hartmanis:~$ cd Parallel/ForestFire
+2019kganesha@hartmanis:~/Parallel/ForestFire$ ls
+demo  fire  fire.c  parallel_demo.c
+2019kganesha@hartmanis:~/Parallel/ForestFire$ nano fire.c
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpicc fire.c -o fire
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpirun -nm 4 fire
+mpirun: Error: unknown option "-m"
+Type 'mpirun --help' for usage.
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpirun -np 4 fire
+Total Probabilities: 100
+Probabilities Each: 18446744073709551516
+Total Probabilities: 100
+Probabilities Each: 0
+Total Probabilities: 100
+Probabilities Each: 18446744073709551516
+Total Probabilities: 100
+Probabilities Each: 0
+--------------------------------------------------------------------------
+[[32068,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+worker 2 sent step 0.006667
+worker 2 sent step 0.030000
+worker 2 sent step 0.036667
+worker 2 sent step 0.046667
+worker 2 sent step 0.070000
+worker 2 sent step 0.063333
+worker 2 sent step 0.080000
+worker 2 sent step 0.098889
+worker 2 sent step 0.114444
+worker 2 sent step 0.112222
+worker 2 sent step 0.173333
+worker 2 sent step 0.187778
+worker 2 sent step 0.265556
+worker 2 sent step 0.296667
+worker 2 sent step 0.348889
+worker 2 sent step 0.373333
+worker 2 sent step 0.504444
+worker 2 sent step 0.741111
+worker 2 sent step 1.143333
+worker 2 sent step 1.323333
+worker 2 sent step 1.740000
+worker 2 sent step 1.712222
+worker 2 sent step 1.612222
+worker 2 sent step 1.476667
+worker 2 sent step 1.388889
+worker 2 sent step 1.293333
+worker 2 sent step 1.245556
+worker 2 sent step 1.196667
+worker 2 sent step 1.150000
+worker 2 sent step 1.117778
+worker 2 sent step 1.085556
+worker 2 sent step 1.053333
+worker 2 sent step 1.032222
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+worker 2 sent step 0.966667
+[hartmanis:27650] 3 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:27650] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+finished16.856376
+^C2019kganesha@hartmanis:~/Parallel/ForestFire$ nano fire.c
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpicc fire.c -o fire
+fire.c: In function 'main':
+fire.c:76:10: warning: too many arguments for format [-Wformat-extra-args]
+   printf("manager received (%lf, $lf)\n",probs[index],step);
+          ^
+2019kganesha@hartmanis:~/Parallel/ForestFire$ nano fire.c
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpicc fire.c -o fire
+2019kganesha@hartmanis:~/Parallel/ForestFire$ nano fire.c
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpicc fire.c -o fire
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpirun -np 2 fire
+--------------------------------------------------------------------------
+[[32213,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 100
+Probabilities Each: 0
+Number of Workers: 1
+finished0.010610
+[hartmanis:27795] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:27795] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+2019kganesha@hartmanis:~/Parallel/ForestFire$ nano fire.c
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpicc fire.c -o fire
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpirun -np 2 fire
+--------------------------------------------------------------------------
+[[32254,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 100
+Probabilities Each: 0
+Number of Workers: 1
+finished0.009628
+[hartmanis:27832] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:27832] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpirun -np 3 fire
+--------------------------------------------------------------------------
+[[32132,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 100
+Probabilities Each: 0
+Number of Workers: 2
+finished0.016124
+[hartmanis:27842] 2 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:27842] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpirun -np 4 fire
+--------------------------------------------------------------------------
+[[32137,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 100
+Probabilities Each: 18446744073709551516
+Number of Workers: 3
+[hartmanis:27855] 3 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:27855] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+finished16.980232
+^C2019kganesha@hartmanis:~/Parallel/ForestFire$ nano fire.c
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpicc fire.c -o fire
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpirun -np 2 fire
+--------------------------------------------------------------------------
+[[32168,1],1]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 100
+Probabilities Each: 0
+Number of Workers: 1
+finished0.009767
+[hartmanis:27886] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:27886] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+2019kganesha@hartmanis:~/Parallel/ForestFire$ nano fire.c
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpicc fire.c -o fire
+^[[A2019kganesha@hartmanis:~/Parallel/ForestFire$ mpirun -np 2 fire
+--------------------------------------------------------------------------
+[[31831,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 100
+Probabilities Each: 100
+Number of Workers: 1
+manager received (0.000000, 0.000000) from worker 0
+manager received (0.010000, 0.010000) from worker 0
+manager received (0.020000, 0.021111) from worker 0
+manager received (0.030000, 0.022222) from worker 0
+manager received (0.040000, 0.025556) from worker 0
+manager received (0.050000, 0.031111) from worker 0
+manager received (0.060000, 0.035556) from worker 0
+manager received (0.070000, 0.044444) from worker 0
+manager received (0.080000, 0.045556) from worker 0
+manager received (0.090000, 0.052222) from worker 0
+manager received (0.100000, 0.050000) from worker 0
+manager received (0.110000, 0.054444) from worker 0
+manager received (0.120000, 0.053333) from worker 0
+manager received (0.130000, 0.051111) from worker 0
+manager received (0.140000, 0.048889) from worker 0
+manager received (0.150000, 0.067778) from worker 0
+manager received (0.160000, 0.072222) from worker 0
+manager received (0.170000, 0.066667) from worker 0
+manager received (0.180000, 0.095556) from worker 0
+manager received (0.190000, 0.093333) from worker 0
+manager received (0.200000, 0.088889) from worker 0
+manager received (0.210000, 0.086667) from worker 0
+manager received (0.220000, 0.108889) from worker 0
+manager received (0.230000, 0.104444) from worker 0
+manager received (0.240000, 0.114444) from worker 0
+manager received (0.250000, 0.115556) from worker 0
+manager received (0.260000, 0.131111) from worker 0
+manager received (0.270000, 0.147778) from worker 0
+manager received (0.280000, 0.154444) from worker 0
+manager received (0.290000, 0.145556) from worker 0
+manager received (0.300000, 0.145556) from worker 0
+manager received (0.310000, 0.170000) from worker 0
+manager received (0.320000, 0.173333) from worker 0
+manager received (0.330000, 0.147778) from worker 0
+manager received (0.340000, 0.174444) from worker 0
+manager received (0.350000, 0.190000) from worker 0
+manager received (0.360000, 0.223333) from worker 0
+manager received (0.370000, 0.225556) from worker 0
+manager received (0.380000, 0.244444) from worker 0
+manager received (0.390000, 0.281111) from worker 0
+manager received (0.400000, 0.285556) from worker 0
+manager received (0.410000, 0.294444) from worker 0
+manager received (0.420000, 0.323333) from worker 0
+manager received (0.430000, 0.385556) from worker 0
+manager received (0.440000, 0.353333) from worker 0
+manager received (0.450000, 0.397778) from worker 0
+manager received (0.460000, 0.396667) from worker 0
+manager received (0.470000, 0.463333) from worker 0
+manager received (0.480000, 0.520000) from worker 0
+manager received (0.490000, 0.533333) from worker 0
+manager received (0.500000, 0.655556) from worker 0
+manager received (0.510000, 0.738889) from worker 0
+manager received (0.520000, 0.726667) from worker 0
+manager received (0.530000, 0.894444) from worker 0
+manager received (0.540000, 0.666667) from worker 0
+manager received (0.550000, 0.980000) from worker 0
+manager received (0.560000, 1.162222) from worker 0
+manager received (0.570000, 1.372222) from worker 0
+manager received (0.580000, 1.410000) from worker 0
+manager received (0.590000, 1.438889) from worker 0
+manager received (0.600000, 1.536667) from worker 0
+manager received (0.610000, 1.602222) from worker 0
+manager received (0.620000, 1.680000) from worker 0
+manager received (0.630000, 1.791111) from worker 0
+manager received (0.640000, 1.723333) from worker 0
+manager received (0.650000, 1.643333) from worker 0
+manager received (0.660000, 1.658889) from worker 0
+manager received (0.670000, 1.647778) from worker 0
+manager received (0.680000, 1.635556) from worker 0
+manager received (0.690000, 1.513333) from worker 0
+manager received (0.700000, 1.474444) from worker 0
+manager received (0.710000, 1.433333) from worker 0
+manager received (0.720000, 1.411111) from worker 0
+manager received (0.730000, 1.392222) from worker 0
+manager received (0.740000, 1.387778) from worker 0
+manager received (0.750000, 1.334444) from worker 0
+manager received (0.760000, 1.298889) from worker 0
+manager received (0.770000, 1.287778) from worker 0
+manager received (0.780000, 1.277778) from worker 0
+manager received (0.790000, 1.255556) from worker 0
+manager received (0.800000, 1.240000) from worker 0
+manager received (0.810000, 1.203333) from worker 0
+manager received (0.820000, 1.208889) from worker 0
+manager received (0.830000, 1.180000) from worker 0
+manager received (0.840000, 1.174444) from worker 0
+manager received (0.850000, 1.153333) from worker 0
+manager received (0.860000, 1.156667) from worker 0
+manager received (0.870000, 1.133333) from worker 0
+manager received (0.880000, 1.118889) from worker 0
+manager received (0.890000, 1.113333) from worker 0
+manager received (0.900000, 1.101111) from worker 0
+manager received (0.910000, 1.087778) from worker 0
+manager received (0.920000, 1.077778) from worker 0
+manager received (0.930000, 1.070000) from worker 0
+manager received (0.940000, 1.065556) from worker 0
+manager received (0.950000, 1.047778) from worker 0
+manager received (0.960000, 1.042222) from worker 0
+manager received (0.970000, 1.040000) from worker 0
+manager received (0.980000, 1.024444) from worker 0
+manager received (0.990000, 1.001111) from worker 0
+finished0.119088
+[hartmanis:27921] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:27921] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+2019kganesha@hartmanis:~/Parallel/ForestFire$ nano fire.c
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpicc fire.c -o fire
+fire.c: In function 'main':
+fire.c:47:48: error: expected ')' before ';' token
+     numProbsEach = (size_t)( ((double)numProbs);/((double)size - 1.0) )
+                                                ^
+fire.c:48:5: error: expected ';' before 'if'
+     if(rank == 0){
+     ^
+2019kganesha@hartmanis:~/Parallel/ForestFire$ nano fire.c
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpicc fire.c -o fire
+fire.c: In function 'main':
+fire.c:48:5: error: expected ';' before 'if'
+     if(rank == 0){
+     ^
+2019kganesha@hartmanis:~/Parallel/ForestFire$ nano fire.c
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpicc fire.c -o fire
+fire.c: In function 'main':
+fire.c:83:16: warning: unknown conversion type character 'r' in format [-Wformat=]
+         printf("%runtime: lf\n",toc-tic);
+                ^
+fire.c:83:16: warning: too many arguments for format [-Wformat-extra-args]
+2019kganesha@hartmanis:~/Parallel/ForestFire$ nano fire.c
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpicc fire.c -o fire
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpirun -np 2 fire
+--------------------------------------------------------------------------
+[[31794,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 100
+Probabilities Each: 100
+Number of Workers: 1
+manager received (0.000000, 0.000000) from worker 0
+manager received (0.010000, 0.010000) from worker 0
+manager received (0.020000, 0.021111) from worker 0
+manager received (0.030000, 0.022222) from worker 0
+manager received (0.040000, 0.025556) from worker 0
+manager received (0.050000, 0.031111) from worker 0
+manager received (0.060000, 0.035556) from worker 0
+manager received (0.070000, 0.044444) from worker 0
+manager received (0.080000, 0.045556) from worker 0
+manager received (0.090000, 0.052222) from worker 0
+manager received (0.100000, 0.050000) from worker 0
+manager received (0.110000, 0.054444) from worker 0
+manager received (0.120000, 0.053333) from worker 0
+manager received (0.130000, 0.051111) from worker 0
+manager received (0.140000, 0.048889) from worker 0
+manager received (0.150000, 0.067778) from worker 0
+manager received (0.160000, 0.072222) from worker 0
+manager received (0.170000, 0.066667) from worker 0
+manager received (0.180000, 0.095556) from worker 0
+manager received (0.190000, 0.093333) from worker 0
+manager received (0.200000, 0.088889) from worker 0
+manager received (0.210000, 0.086667) from worker 0
+manager received (0.220000, 0.108889) from worker 0
+manager received (0.230000, 0.104444) from worker 0
+manager received (0.240000, 0.114444) from worker 0
+manager received (0.250000, 0.115556) from worker 0
+manager received (0.260000, 0.131111) from worker 0
+manager received (0.270000, 0.147778) from worker 0
+manager received (0.280000, 0.154444) from worker 0
+manager received (0.290000, 0.145556) from worker 0
+manager received (0.300000, 0.145556) from worker 0
+manager received (0.310000, 0.170000) from worker 0
+manager received (0.320000, 0.173333) from worker 0
+manager received (0.330000, 0.147778) from worker 0
+manager received (0.340000, 0.174444) from worker 0
+manager received (0.350000, 0.190000) from worker 0
+manager received (0.360000, 0.223333) from worker 0
+manager received (0.370000, 0.225556) from worker 0
+manager received (0.380000, 0.244444) from worker 0
+manager received (0.390000, 0.281111) from worker 0
+manager received (0.400000, 0.285556) from worker 0
+manager received (0.410000, 0.294444) from worker 0
+manager received (0.420000, 0.323333) from worker 0
+manager received (0.430000, 0.385556) from worker 0
+manager received (0.440000, 0.353333) from worker 0
+manager received (0.450000, 0.397778) from worker 0
+manager received (0.460000, 0.396667) from worker 0
+manager received (0.470000, 0.463333) from worker 0
+manager received (0.480000, 0.520000) from worker 0
+manager received (0.490000, 0.533333) from worker 0
+manager received (0.500000, 0.655556) from worker 0
+manager received (0.510000, 0.738889) from worker 0
+manager received (0.520000, 0.726667) from worker 0
+manager received (0.530000, 0.894444) from worker 0
+manager received (0.540000, 0.666667) from worker 0
+manager received (0.550000, 0.980000) from worker 0
+manager received (0.560000, 1.162222) from worker 0
+manager received (0.570000, 1.372222) from worker 0
+manager received (0.580000, 1.410000) from worker 0
+manager received (0.590000, 1.438889) from worker 0
+manager received (0.600000, 1.536667) from worker 0
+manager received (0.610000, 1.602222) from worker 0
+manager received (0.620000, 1.680000) from worker 0
+manager received (0.630000, 1.791111) from worker 0
+manager received (0.640000, 1.723333) from worker 0
+manager received (0.650000, 1.643333) from worker 0
+manager received (0.660000, 1.658889) from worker 0
+manager received (0.670000, 1.647778) from worker 0
+manager received (0.680000, 1.635556) from worker 0
+manager received (0.690000, 1.513333) from worker 0
+manager received (0.700000, 1.474444) from worker 0
+manager received (0.710000, 1.433333) from worker 0
+manager received (0.720000, 1.411111) from worker 0
+manager received (0.730000, 1.392222) from worker 0
+manager received (0.740000, 1.387778) from worker 0
+manager received (0.750000, 1.334444) from worker 0
+manager received (0.760000, 1.298889) from worker 0
+manager received (0.770000, 1.287778) from worker 0
+manager received (0.780000, 1.277778) from worker 0
+manager received (0.790000, 1.255556) from worker 0
+manager received (0.800000, 1.240000) from worker 0
+manager received (0.810000, 1.203333) from worker 0
+manager received (0.820000, 1.208889) from worker 0
+manager received (0.830000, 1.180000) from worker 0
+manager received (0.840000, 1.174444) from worker 0
+manager received (0.850000, 1.153333) from worker 0
+manager received (0.860000, 1.156667) from worker 0
+manager received (0.870000, 1.133333) from worker 0
+manager received (0.880000, 1.118889) from worker 0
+manager received (0.890000, 1.113333) from worker 0
+manager received (0.900000, 1.101111) from worker 0
+manager received (0.910000, 1.087778) from worker 0
+manager received (0.920000, 1.077778) from worker 0
+manager received (0.930000, 1.070000) from worker 0
+manager received (0.940000, 1.065556) from worker 0
+manager received (0.950000, 1.047778) from worker 0
+manager received (0.960000, 1.042222) from worker 0
+manager received (0.970000, 1.040000) from worker 0
+manager received (0.980000, 1.024444) from worker 0
+manager received (0.990000, 1.001111) from worker 0
+finished
+runtime: 0.119885
+[hartmanis:28020] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:28020] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpicc fire.c -o fire
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpirun -np 3 fire
+--------------------------------------------------------------------------
+[[31938,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 100
+Probabilities Each: 50
+Number of Workers: 2
+manager received (0.000000, 0.000000) from worker 0
+manager received (0.010000, 0.006667) from worker 1
+manager received (0.020000, 0.018889) from worker 0
+manager received (0.030000, 0.023333) from worker 1
+manager received (0.040000, 0.031111) from worker 0
+manager received (0.050000, 0.032222) from worker 1
+manager received (0.060000, 0.032222) from worker 0
+manager received (0.070000, 0.035556) from worker 1
+manager received (0.080000, 0.051111) from worker 0
+manager received (0.090000, 0.052222) from worker 1
+manager received (0.100000, 0.043333) from worker 0
+manager received (0.110000, 0.047778) from worker 1
+manager received (0.120000, 0.048889) from worker 0
+manager received (0.130000, 0.050000) from worker 1
+manager received (0.140000, 0.061111) from worker 0
+manager received (0.150000, 0.062222) from worker 1
+manager received (0.160000, 0.076667) from worker 0
+manager received (0.170000, 0.082222) from worker 1
+manager received (0.180000, 0.078889) from worker 0
+manager received (0.190000, 0.082222) from worker 1
+manager received (0.200000, 0.087778) from worker 0
+manager received (0.210000, 0.092222) from worker 1
+manager received (0.220000, 0.093333) from worker 0
+manager received (0.230000, 0.104444) from worker 1
+manager received (0.240000, 0.113333) from worker 0
+manager received (0.250000, 0.118889) from worker 1
+manager received (0.260000, 0.132222) from worker 0
+manager received (0.270000, 0.136667) from worker 1
+manager received (0.280000, 0.114444) from worker 0
+manager received (0.290000, 0.132222) from worker 1
+manager received (0.300000, 0.167778) from worker 0
+manager received (0.310000, 0.167778) from worker 1
+manager received (0.320000, 0.183333) from worker 0
+manager received (0.330000, 0.198889) from worker 1
+manager received (0.340000, 0.197778) from worker 0
+manager received (0.350000, 0.211111) from worker 1
+manager received (0.360000, 0.265556) from worker 0
+manager received (0.370000, 0.274444) from worker 1
+manager received (0.380000, 0.261111) from worker 0
+manager received (0.390000, 0.268889) from worker 1
+manager received (0.400000, 0.261111) from worker 0
+manager received (0.410000, 0.286667) from worker 1
+manager received (0.420000, 0.426667) from worker 0
+manager received (0.430000, 0.444444) from worker 1
+manager received (0.440000, 0.368889) from worker 0
+manager received (0.450000, 0.391111) from worker 1
+manager received (0.460000, 0.350000) from worker 0
+manager received (0.470000, 0.386667) from worker 1
+manager received (0.480000, 0.450000) from worker 0
+manager received (0.490000, 0.492222) from worker 1
+manager received (0.500000, 0.604444) from worker 0
+manager received (0.510000, 0.691111) from worker 1
+manager received (0.520000, 0.711111) from worker 0
+manager received (0.530000, 0.795556) from worker 1
+manager received (0.540000, 0.833333) from worker 0
+manager received (0.550000, 0.904444) from worker 1
+manager received (0.560000, 1.361111) from worker 0
+manager received (0.570000, 1.487778) from worker 1
+manager received (0.580000, 1.463333) from worker 0
+manager received (0.590000, 1.582222) from worker 1
+manager received (0.600000, 1.611111) from worker 0
+manager received (0.610000, 1.654444) from worker 1
+manager received (0.620000, 1.577778) from worker 0
+manager received (0.630000, 1.681111) from worker 1
+manager received (0.640000, 1.760000) from worker 0
+manager received (0.650000, 1.650000) from worker 1
+manager received (0.660000, 1.694444) from worker 0
+manager received (0.670000, 1.661111) from worker 1
+manager received (0.680000, 1.572222) from worker 0
+manager received (0.690000, 1.576667) from worker 1
+manager received (0.700000, 1.506667) from worker 0
+manager received (0.710000, 1.464444) from worker 1
+manager received (0.720000, 1.393333) from worker 0
+manager received (0.730000, 1.357778) from worker 1
+manager received (0.740000, 1.365556) from worker 0
+manager received (0.750000, 1.333333) from worker 1
+manager received (0.760000, 1.346667) from worker 0
+manager received (0.770000, 1.302222) from worker 1
+manager received (0.780000, 1.248889) from worker 0
+manager received (0.790000, 1.235556) from worker 1
+manager received (0.800000, 1.223333) from worker 0
+manager received (0.810000, 1.216667) from worker 1
+manager received (0.820000, 1.201111) from worker 0
+manager received (0.830000, 1.184444) from worker 1
+manager received (0.840000, 1.168889) from worker 0
+manager received (0.850000, 1.164444) from worker 1
+manager received (0.860000, 1.145556) from worker 0
+manager received (0.870000, 1.140000) from worker 1
+manager received (0.880000, 1.117778) from worker 0
+manager received (0.890000, 1.110000) from worker 1
+manager received (0.900000, 1.097778) from worker 0
+manager received (0.910000, 1.088889) from worker 1
+manager received (0.920000, 1.078889) from worker 0
+manager received (0.930000, 1.070000) from worker 1
+manager received (0.940000, 1.063333) from worker 0
+manager received (0.950000, 1.056667) from worker 1
+manager received (0.960000, 1.042222) from worker 0
+manager received (0.970000, 1.035556) from worker 1
+manager received (0.980000, 1.024444) from worker 0
+manager received (0.990000, 1.007778) from worker 1
+finished
+runtime: 0.066687
+[hartmanis:28036] 2 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:28036] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpirun -np 4 fire
+--------------------------------------------------------------------------
+[[31971,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 100
+Probabilities Each: 33
+Number of Workers: 3
+manager received (0.000000, 0.000000) from worker 0
+manager received (0.010000, 0.006667) from worker 1
+manager received (0.020000, 0.018889) from worker 2
+manager received (0.030000, 0.023333) from worker 0
+manager received (0.040000, 0.030000) from worker 1
+manager received (0.050000, 0.034444) from worker 2
+manager received (0.060000, 0.033333) from worker 0
+manager received (0.070000, 0.036667) from worker 1
+manager received (0.080000, 0.040000) from worker 2
+manager received (0.090000, 0.038889) from worker 0
+manager received (0.100000, 0.046667) from worker 1
+manager received (0.110000, 0.048889) from worker 2
+manager received (0.120000, 0.067778) from worker 0
+manager received (0.130000, 0.070000) from worker 1
+manager received (0.140000, 0.072222) from worker 2
+manager received (0.150000, 0.058889) from worker 0
+manager received (0.160000, 0.063333) from worker 1
+manager received (0.170000, 0.067778) from worker 2
+manager received (0.180000, 0.074444) from worker 0
+manager received (0.190000, 0.080000) from worker 1
+manager received (0.200000, 0.092222) from worker 2
+manager received (0.210000, 0.088889) from worker 0
+manager received (0.220000, 0.098889) from worker 1
+manager received (0.230000, 0.110000) from worker 2
+manager received (0.240000, 0.105556) from worker 0
+manager received (0.250000, 0.114444) from worker 1
+manager received (0.260000, 0.121111) from worker 2
+manager received (0.270000, 0.107778) from worker 0
+manager received (0.280000, 0.112222) from worker 1
+manager received (0.290000, 0.141111) from worker 2
+manager received (0.300000, 0.158889) from worker 0
+manager received (0.310000, 0.173333) from worker 1
+manager received (0.320000, 0.181111) from worker 2
+manager received (0.330000, 0.180000) from worker 0
+manager received (0.340000, 0.187778) from worker 1
+manager received (0.350000, 0.188889) from worker 2
+manager received (0.360000, 0.250000) from worker 0
+manager received (0.370000, 0.265556) from worker 1
+manager received (0.380000, 0.271111) from worker 2
+manager received (0.390000, 0.267778) from worker 0
+manager received (0.400000, 0.296667) from worker 1
+manager received (0.410000, 0.306667) from worker 2
+manager received (0.420000, 0.300000) from worker 0
+manager received (0.430000, 0.348889) from worker 1
+manager received (0.440000, 0.366667) from worker 2
+manager received (0.450000, 0.362222) from worker 0
+manager received (0.460000, 0.373333) from worker 1
+manager received (0.470000, 0.417778) from worker 2
+manager received (0.480000, 0.451111) from worker 0
+manager received (0.490000, 0.504444) from worker 1
+manager received (0.500000, 0.627778) from worker 2
+manager received (0.510000, 0.624444) from worker 0
+manager received (0.520000, 0.741111) from worker 1
+manager received (0.530000, 0.815556) from worker 2
+manager received (0.540000, 0.951111) from worker 0
+manager received (0.550000, 1.143333) from worker 1
+manager received (0.560000, 1.193333) from worker 2
+manager received (0.570000, 1.200000) from worker 0
+manager received (0.580000, 1.323333) from worker 1
+manager received (0.590000, 1.617778) from worker 2
+manager received (0.600000, 1.528889) from worker 0
+manager received (0.610000, 1.740000) from worker 1
+manager received (0.620000, 1.841111) from worker 2
+manager received (0.630000, 1.674444) from worker 0
+manager received (0.640000, 1.712222) from worker 1
+manager received (0.650000, 1.658889) from worker 2
+manager received (0.660000, 1.666667) from worker 0
+manager received (0.670000, 1.612222) from worker 1
+manager received (0.680000, 1.576667) from worker 2
+manager received (0.690000, 1.554444) from worker 0
+manager received (0.700000, 1.476667) from worker 1
+manager received (0.710000, 1.436667) from worker 2
+manager received (0.720000, 1.417778) from worker 0
+manager received (0.730000, 1.388889) from worker 1
+manager received (0.740000, 1.368889) from worker 2
+manager received (0.750000, 1.313333) from worker 0
+manager received (0.760000, 1.293333) from worker 1
+manager received (0.770000, 1.275556) from worker 2
+manager received (0.780000, 1.271111) from worker 0
+manager received (0.790000, 1.245556) from worker 1
+manager received (0.800000, 1.226667) from worker 2
+manager received (0.810000, 1.211111) from worker 0
+manager received (0.820000, 1.196667) from worker 1
+manager received (0.830000, 1.174444) from worker 2
+manager received (0.840000, 1.170000) from worker 0
+manager received (0.850000, 1.150000) from worker 1
+manager received (0.860000, 1.141111) from worker 2
+manager received (0.870000, 1.135556) from worker 0
+manager received (0.880000, 1.117778) from worker 1
+manager received (0.890000, 1.114444) from worker 2
+manager received (0.900000, 1.097778) from worker 0
+manager received (0.910000, 1.085556) from worker 1
+manager received (0.920000, 1.074444) from worker 2
+manager received (0.930000, 1.064444) from worker 0
+manager received (0.940000, 1.053333) from worker 1
+manager received (0.950000, 1.042222) from worker 2
+manager received (0.960000, 1.040000) from worker 0
+manager received (0.970000, 1.032222) from worker 1
+manager received (0.980000, 1.016667) from worker 2
+finished
+runtime: 0.071745
+[hartmanis:28069] 3 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:28069] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpirun -np 5 fire
+--------------------------------------------------------------------------
+[[31987,1],1]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 100
+Probabilities Each: 25
+Number of Workers: 4
+manager received (0.000000, 0.000000) from worker 0
+manager received (0.010000, 0.007778) from worker 1
+manager received (0.020000, 0.018889) from worker 2
+manager received (0.030000, 0.023333) from worker 3
+manager received (0.040000, 0.030000) from worker 0
+manager received (0.050000, 0.034444) from worker 1
+manager received (0.060000, 0.036667) from worker 2
+manager received (0.070000, 0.038889) from worker 3
+manager received (0.080000, 0.040000) from worker 0
+manager received (0.090000, 0.045556) from worker 1
+manager received (0.100000, 0.051111) from worker 2
+manager received (0.110000, 0.051111) from worker 3
+manager received (0.120000, 0.053333) from worker 0
+manager received (0.130000, 0.061111) from worker 1
+manager received (0.140000, 0.063333) from worker 2
+manager received (0.150000, 0.066667) from worker 3
+manager received (0.160000, 0.075556) from worker 0
+manager received (0.170000, 0.076667) from worker 1
+manager received (0.180000, 0.080000) from worker 2
+manager received (0.190000, 0.085556) from worker 3
+manager received (0.200000, 0.086667) from worker 0
+manager received (0.210000, 0.090000) from worker 1
+manager received (0.220000, 0.096667) from worker 2
+manager received (0.230000, 0.101111) from worker 3
+manager received (0.240000, 0.116667) from worker 0
+manager received (0.250000, 0.126667) from worker 1
+manager received (0.260000, 0.131111) from worker 2
+manager received (0.270000, 0.135556) from worker 3
+manager received (0.280000, 0.148889) from worker 0
+manager received (0.290000, 0.156667) from worker 1
+manager received (0.300000, 0.160000) from worker 2
+manager received (0.310000, 0.164444) from worker 3
+manager received (0.320000, 0.165556) from worker 0
+manager received (0.330000, 0.186667) from worker 1
+manager received (0.340000, 0.190000) from worker 2
+manager received (0.350000, 0.206667) from worker 3
+manager received (0.360000, 0.214444) from worker 0
+manager received (0.370000, 0.217778) from worker 1
+manager received (0.380000, 0.238889) from worker 2
+manager received (0.390000, 0.246667) from worker 3
+manager received (0.400000, 0.246667) from worker 0
+manager received (0.410000, 0.262222) from worker 1
+manager received (0.420000, 0.261111) from worker 2
+manager received (0.430000, 0.264444) from worker 3
+manager received (0.440000, 0.301111) from worker 0
+manager received (0.450000, 0.320000) from worker 1
+manager received (0.460000, 0.358889) from worker 2
+manager received (0.470000, 0.358889) from worker 3
+manager received (0.480000, 0.493333) from worker 0
+manager received (0.490000, 0.492222) from worker 1
+manager received (0.500000, 0.531111) from worker 2
+manager received (0.510000, 0.586667) from worker 3
+manager received (0.520000, 0.744444) from worker 0
+manager received (0.530000, 0.856667) from worker 1
+manager received (0.540000, 0.924444) from worker 2
+manager received (0.550000, 0.996667) from worker 3
+manager received (0.560000, 1.338889) from worker 0
+manager received (0.570000, 1.506667) from worker 1
+manager received (0.580000, 1.536667) from worker 2
+manager received (0.590000, 1.651111) from worker 3
+manager received (0.600000, 1.426667) from worker 0
+manager received (0.610000, 1.627778) from worker 1
+manager received (0.620000, 1.777778) from worker 2
+manager received (0.630000, 1.796667) from worker 3
+manager received (0.640000, 1.838889) from worker 0
+manager received (0.650000, 1.688889) from worker 1
+manager received (0.660000, 1.711111) from worker 2
+manager received (0.670000, 1.625556) from worker 3
+manager received (0.680000, 1.525556) from worker 0
+manager received (0.690000, 1.524444) from worker 1
+manager received (0.700000, 1.448889) from worker 2
+manager received (0.710000, 1.452222) from worker 3
+manager received (0.720000, 1.395556) from worker 0
+manager received (0.730000, 1.386667) from worker 1
+manager received (0.740000, 1.348889) from worker 2
+manager received (0.750000, 1.344444) from worker 3
+manager received (0.760000, 1.300000) from worker 0
+manager received (0.770000, 1.277778) from worker 1
+manager received (0.780000, 1.255556) from worker 2
+manager received (0.790000, 1.227778) from worker 3
+manager received (0.800000, 1.234444) from worker 0
+manager received (0.810000, 1.223333) from worker 1
+manager received (0.820000, 1.205556) from worker 2
+manager received (0.830000, 1.191111) from worker 3
+manager received (0.840000, 1.162222) from worker 0
+manager received (0.850000, 1.153333) from worker 1
+manager received (0.860000, 1.135556) from worker 2
+manager received (0.870000, 1.134444) from worker 3
+manager received (0.880000, 1.124444) from worker 0
+manager received (0.890000, 1.111111) from worker 1
+manager received (0.900000, 1.104444) from worker 2
+manager received (0.910000, 1.084444) from worker 3
+manager received (0.920000, 1.076667) from worker 0
+manager received (0.930000, 1.065556) from worker 1
+manager received (0.940000, 1.058889) from worker 2
+manager received (0.950000, 1.048889) from worker 3
+manager received (0.960000, 1.045556) from worker 0
+manager received (0.970000, 1.034444) from worker 1
+manager received (0.980000, 1.021111) from worker 2
+manager received (0.990000, 1.003333) from worker 3
+finished
+runtime: 0.053510
+[hartmanis:28085] 4 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:28085] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpirun -np 6 fire
+--------------------------------------------------------------------------
+[[31886,1],1]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 100
+Probabilities Each: 20
+Number of Workers: 5
+manager received (0.000000, 0.000000) from worker 0
+manager received (0.010000, 0.006667) from worker 1
+manager received (0.020000, 0.018889) from worker 2
+manager received (0.030000, 0.023333) from worker 3
+manager received (0.040000, 0.026667) from worker 4
+manager received (0.050000, 0.034444) from worker 0
+manager received (0.060000, 0.036667) from worker 1
+manager received (0.070000, 0.037778) from worker 2
+manager received (0.080000, 0.045556) from worker 3
+manager received (0.090000, 0.047778) from worker 4
+manager received (0.100000, 0.051111) from worker 0
+manager received (0.110000, 0.052222) from worker 1
+manager received (0.120000, 0.055556) from worker 2
+manager received (0.130000, 0.061111) from worker 3
+manager received (0.140000, 0.063333) from worker 4
+manager received (0.150000, 0.068889) from worker 0
+manager received (0.160000, 0.073333) from worker 1
+manager received (0.170000, 0.075556) from worker 2
+manager received (0.180000, 0.072222) from worker 3
+manager received (0.190000, 0.080000) from worker 4
+manager received (0.200000, 0.084444) from worker 0
+manager received (0.210000, 0.092222) from worker 1
+manager received (0.220000, 0.096667) from worker 2
+manager received (0.230000, 0.102222) from worker 3
+manager received (0.240000, 0.104444) from worker 4
+manager received (0.250000, 0.107778) from worker 0
+manager received (0.260000, 0.110000) from worker 1
+manager received (0.270000, 0.115556) from worker 2
+manager received (0.280000, 0.118889) from worker 3
+manager received (0.290000, 0.127778) from worker 4
+manager received (0.300000, 0.153333) from worker 0
+manager received (0.310000, 0.157778) from worker 1
+manager received (0.320000, 0.160000) from worker 2
+manager received (0.330000, 0.175556) from worker 3
+manager received (0.340000, 0.180000) from worker 4
+manager received (0.350000, 0.185556) from worker 0
+manager received (0.360000, 0.198889) from worker 1
+manager received (0.370000, 0.237778) from worker 2
+manager received (0.380000, 0.254444) from worker 3
+manager received (0.390000, 0.266667) from worker 4
+manager received (0.400000, 0.273333) from worker 0
+manager received (0.410000, 0.291111) from worker 1
+manager received (0.420000, 0.312222) from worker 2
+manager received (0.430000, 0.327778) from worker 3
+manager received (0.440000, 0.362222) from worker 4
+manager received (0.450000, 0.361111) from worker 0
+manager received (0.460000, 0.371111) from worker 1
+manager received (0.470000, 0.424444) from worker 2
+manager received (0.480000, 0.461111) from worker 3
+manager received (0.490000, 0.546667) from worker 4
+manager received (0.500000, 0.530000) from worker 0
+manager received (0.510000, 0.612222) from worker 1
+manager received (0.520000, 0.708889) from worker 2
+manager received (0.530000, 0.741111) from worker 3
+manager received (0.540000, 0.901111) from worker 4
+manager received (0.550000, 1.028889) from worker 0
+manager received (0.560000, 1.077778) from worker 1
+manager received (0.570000, 1.221111) from worker 2
+manager received (0.580000, 1.351111) from worker 3
+manager received (0.590000, 1.322222) from worker 4
+manager received (0.600000, 1.526667) from worker 0
+manager received (0.610000, 1.541111) from worker 1
+manager received (0.620000, 1.724444) from worker 2
+manager received (0.630000, 1.650000) from worker 3
+manager received (0.640000, 1.734444) from worker 4
+manager received (0.650000, 1.651111) from worker 0
+manager received (0.660000, 1.688889) from worker 1
+manager received (0.670000, 1.686667) from worker 2
+manager received (0.680000, 1.630000) from worker 3
+manager received (0.690000, 1.563333) from worker 4
+manager received (0.700000, 1.467778) from worker 0
+manager received (0.710000, 1.442222) from worker 1
+manager received (0.720000, 1.427778) from worker 2
+manager received (0.730000, 1.407778) from worker 3
+manager received (0.740000, 1.395556) from worker 4
+manager received (0.750000, 1.332222) from worker 0
+manager received (0.760000, 1.325556) from worker 1
+manager received (0.770000, 1.306667) from worker 2
+manager received (0.780000, 1.286667) from worker 3
+manager received (0.790000, 1.252222) from worker 4
+manager received (0.800000, 1.218889) from worker 0
+manager received (0.810000, 1.200000) from worker 1
+manager received (0.820000, 1.186667) from worker 2
+manager received (0.830000, 1.170000) from worker 3
+manager received (0.840000, 1.150000) from worker 4
+manager received (0.850000, 1.160000) from worker 0
+manager received (0.860000, 1.155556) from worker 1
+manager received (0.870000, 1.143333) from worker 2
+manager received (0.880000, 1.128889) from worker 3
+manager received (0.890000, 1.115556) from worker 4
+manager received (0.900000, 1.105556) from worker 0
+manager received (0.910000, 1.093333) from worker 1
+manager received (0.920000, 1.078889) from worker 2
+manager received (0.930000, 1.074444) from worker 3
+manager received (0.940000, 1.065556) from worker 4
+manager received (0.950000, 1.051111) from worker 0
+manager received (0.960000, 1.042222) from worker 1
+manager received (0.970000, 1.033333) from worker 2
+manager received (0.980000, 1.017778) from worker 3
+manager received (0.990000, 1.007778) from worker 4
+finished
+runtime: 0.051708
+[hartmanis:28104] 5 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:28104] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpirun -np 7 fire
+--------------------------------------------------------------------------
+[[31897,1],1]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 100
+Probabilities Each: 16
+Number of Workers: 6
+manager received (0.000000, 0.000000) from worker 0
+manager received (0.010000, 0.006667) from worker 1
+manager received (0.020000, 0.018889) from worker 2
+manager received (0.030000, 0.023333) from worker 3
+manager received (0.040000, 0.026667) from worker 4
+manager received (0.050000, 0.032222) from worker 5
+manager received (0.060000, 0.036667) from worker 0
+manager received (0.070000, 0.038889) from worker 1
+manager received (0.080000, 0.045556) from worker 2
+manager received (0.090000, 0.047778) from worker 3
+manager received (0.100000, 0.048889) from worker 4
+manager received (0.110000, 0.053333) from worker 5
+manager received (0.120000, 0.055556) from worker 0
+manager received (0.130000, 0.061111) from worker 1
+manager received (0.140000, 0.063333) from worker 2
+manager received (0.150000, 0.072222) from worker 3
+manager received (0.160000, 0.080000) from worker 4
+manager received (0.170000, 0.082222) from worker 5
+manager received (0.180000, 0.072222) from worker 0
+manager received (0.190000, 0.080000) from worker 1
+manager received (0.200000, 0.085556) from worker 2
+manager received (0.210000, 0.088889) from worker 3
+manager received (0.220000, 0.095556) from worker 4
+manager received (0.230000, 0.100000) from worker 5
+manager received (0.240000, 0.104444) from worker 0
+manager received (0.250000, 0.117778) from worker 1
+manager received (0.260000, 0.118889) from worker 2
+manager received (0.270000, 0.123333) from worker 3
+manager received (0.280000, 0.130000) from worker 4
+manager received (0.290000, 0.132222) from worker 5
+manager received (0.300000, 0.140000) from worker 0
+manager received (0.310000, 0.143333) from worker 1
+manager received (0.320000, 0.147778) from worker 2
+manager received (0.330000, 0.160000) from worker 3
+manager received (0.340000, 0.165556) from worker 4
+manager received (0.350000, 0.178889) from worker 5
+manager received (0.360000, 0.207778) from worker 0
+manager received (0.370000, 0.215556) from worker 1
+manager received (0.380000, 0.228889) from worker 2
+manager received (0.390000, 0.248889) from worker 3
+manager received (0.400000, 0.301111) from worker 4
+manager received (0.410000, 0.318889) from worker 5
+manager received (0.420000, 0.342222) from worker 0
+manager received (0.430000, 0.381111) from worker 1
+manager received (0.440000, 0.415556) from worker 2
+manager received (0.450000, 0.421111) from worker 3
+manager received (0.460000, 0.455556) from worker 4
+manager received (0.470000, 0.526667) from worker 5
+manager received (0.480000, 0.520000) from worker 0
+manager received (0.490000, 0.591111) from worker 1
+manager received (0.500000, 0.695556) from worker 2
+manager received (0.510000, 0.725556) from worker 3
+manager received (0.520000, 0.844444) from worker 4
+manager received (0.530000, 0.918889) from worker 5
+manager received (0.540000, 0.825556) from worker 0
+manager received (0.550000, 0.900000) from worker 1
+manager received (0.560000, 1.022222) from worker 2
+manager received (0.570000, 1.164444) from worker 3
+manager received (0.580000, 1.266667) from worker 4
+manager received (0.590000, 1.536667) from worker 5
+manager received (0.600000, 1.511111) from worker 0
+manager received (0.610000, 1.507778) from worker 1
+manager received (0.620000, 1.573333) from worker 2
+manager received (0.630000, 1.652222) from worker 3
+manager received (0.640000, 1.646667) from worker 4
+manager received (0.650000, 1.666667) from worker 5
+manager received (0.660000, 1.683333) from worker 0
+manager received (0.670000, 1.632222) from worker 1
+manager received (0.680000, 1.651111) from worker 2
+manager received (0.690000, 1.538889) from worker 3
+manager received (0.700000, 1.495556) from worker 4
+manager received (0.710000, 1.440000) from worker 5
+manager received (0.720000, 1.426667) from worker 0
+manager received (0.730000, 1.386667) from worker 1
+manager received (0.740000, 1.367778) from worker 2
+manager received (0.750000, 1.340000) from worker 3
+manager received (0.760000, 1.314444) from worker 4
+manager received (0.770000, 1.293333) from worker 5
+manager received (0.780000, 1.261111) from worker 0
+manager received (0.790000, 1.236667) from worker 1
+manager received (0.800000, 1.235556) from worker 2
+manager received (0.810000, 1.222222) from worker 3
+manager received (0.820000, 1.207778) from worker 4
+manager received (0.830000, 1.188889) from worker 5
+manager received (0.840000, 1.156667) from worker 0
+manager received (0.850000, 1.152222) from worker 1
+manager received (0.860000, 1.145556) from worker 2
+manager received (0.870000, 1.132222) from worker 3
+manager received (0.880000, 1.115556) from worker 4
+manager received (0.890000, 1.103333) from worker 5
+manager received (0.900000, 1.093333) from worker 0
+manager received (0.910000, 1.086667) from worker 1
+manager received (0.920000, 1.076667) from worker 2
+manager received (0.930000, 1.072222) from worker 3
+manager received (0.940000, 1.061111) from worker 4
+manager received (0.950000, 1.047778) from worker 5
+finished
+runtime: 0.054506
+[hartmanis:28127] 6 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:28127] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+2019kganesha@hartmanis:~/Parallel/ForestFire$ nano fire.c
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpicc fire.c -o fire
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpirun -np 2 fire
+--------------------------------------------------------------------------
+[[32577,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 100
+Probabilities Each: 100
+Number of Workers: 1
+manager received (0.000000, 0.000000) from worker 0
+manager received (0.010000, 0.007333) from worker 0
+manager received (0.020000, 0.009000) from worker 0
+manager received (0.030000, 0.010667) from worker 0
+manager received (0.040000, 0.012000) from worker 0
+manager received (0.050000, 0.014000) from worker 0
+manager received (0.060000, 0.013333) from worker 0
+manager received (0.070000, 0.013333) from worker 0
+manager received (0.080000, 0.020000) from worker 0
+manager received (0.090000, 0.019000) from worker 0
+manager received (0.100000, 0.022000) from worker 0
+manager received (0.110000, 0.022000) from worker 0
+manager received (0.120000, 0.025333) from worker 0
+manager received (0.130000, 0.029000) from worker 0
+manager received (0.140000, 0.028333) from worker 0
+manager received (0.150000, 0.029667) from worker 0
+manager received (0.160000, 0.033000) from worker 0
+manager received (0.170000, 0.033333) from worker 0
+manager received (0.180000, 0.034667) from worker 0
+manager received (0.190000, 0.037000) from worker 0
+manager received (0.200000, 0.044667) from worker 0
+manager received (0.210000, 0.042667) from worker 0
+manager received (0.220000, 0.043667) from worker 0
+manager received (0.230000, 0.045667) from worker 0
+manager received (0.240000, 0.053667) from worker 0
+manager received (0.250000, 0.055667) from worker 0
+manager received (0.260000, 0.059333) from worker 0
+manager received (0.270000, 0.056333) from worker 0
+manager received (0.280000, 0.064667) from worker 0
+manager received (0.290000, 0.072333) from worker 0
+manager received (0.300000, 0.073667) from worker 0
+manager received (0.310000, 0.068333) from worker 0
+manager received (0.320000, 0.081667) from worker 0
+manager received (0.330000, 0.076333) from worker 0
+manager received (0.340000, 0.081333) from worker 0
+manager received (0.350000, 0.096667) from worker 0
+manager received (0.360000, 0.097667) from worker 0
+manager received (0.370000, 0.092000) from worker 0
+manager received (0.380000, 0.114333) from worker 0
+manager received (0.390000, 0.107333) from worker 0
+manager received (0.400000, 0.123667) from worker 0
+manager received (0.410000, 0.141333) from worker 0
+manager received (0.420000, 0.145667) from worker 0
+manager received (0.430000, 0.143000) from worker 0
+manager received (0.440000, 0.164333) from worker 0
+manager received (0.450000, 0.184667) from worker 0
+manager received (0.460000, 0.187000) from worker 0
+manager received (0.470000, 0.257333) from worker 0
+manager received (0.480000, 0.239667) from worker 0
+manager received (0.490000, 0.294667) from worker 0
+manager received (0.500000, 0.334333) from worker 0
+manager received (0.510000, 0.412333) from worker 0
+manager received (0.520000, 0.426000) from worker 0
+manager received (0.530000, 0.464667) from worker 0
+manager received (0.540000, 0.478000) from worker 0
+manager received (0.550000, 0.738667) from worker 0
+manager received (0.560000, 0.999667) from worker 0
+manager received (0.570000, 1.192000) from worker 0
+manager received (0.580000, 1.860333) from worker 0
+manager received (0.590000, 1.814000) from worker 0
+manager received (0.600000, 2.191000) from worker 0
+manager received (0.610000, 2.264667) from worker 0
+manager received (0.620000, 2.049000) from worker 0
+manager received (0.630000, 1.981000) from worker 0
+manager received (0.640000, 1.777667) from worker 0
+manager received (0.650000, 1.795667) from worker 0
+manager received (0.660000, 1.590333) from worker 0
+manager received (0.670000, 1.567000) from worker 0
+manager received (0.680000, 1.505667) from worker 0
+manager received (0.690000, 1.456000) from worker 0
+manager received (0.700000, 1.426667) from worker 0
+manager received (0.710000, 1.383333) from worker 0
+manager received (0.720000, 1.355333) from worker 0
+manager received (0.730000, 1.327000) from worker 0
+manager received (0.740000, 1.304667) from worker 0
+manager received (0.750000, 1.283000) from worker 0
+manager received (0.760000, 1.273667) from worker 0
+manager received (0.770000, 1.248333) from worker 0
+manager received (0.780000, 1.217000) from worker 0
+manager received (0.790000, 1.216000) from worker 0
+manager received (0.800000, 1.194667) from worker 0
+manager received (0.810000, 1.185667) from worker 0
+manager received (0.820000, 1.173000) from worker 0
+manager received (0.830000, 1.157000) from worker 0
+manager received (0.840000, 1.144000) from worker 0
+manager received (0.850000, 1.137000) from worker 0
+manager received (0.860000, 1.125667) from worker 0
+manager received (0.870000, 1.114000) from worker 0
+manager received (0.880000, 1.104000) from worker 0
+manager received (0.890000, 1.099333) from worker 0
+manager received (0.900000, 1.090333) from worker 0
+manager received (0.910000, 1.081000) from worker 0
+manager received (0.920000, 1.072000) from worker 0
+manager received (0.930000, 1.065667) from worker 0
+manager received (0.940000, 1.057667) from worker 0
+manager received (0.950000, 1.049333) from worker 0
+manager received (0.960000, 1.040667) from worker 0
+manager received (0.970000, 1.032333) from worker 0
+manager received (0.980000, 1.023000) from worker 0
+manager received (0.990000, 1.012667) from worker 0
+finished
+runtime: 1.165909
+[hartmanis:28167] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:28167] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+2019kganesha@hartmanis:~/Parallel/ForestFire$ nano fire.c
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpicc fire.c -o fire
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpirun -np 2 fire
+--------------------------------------------------------------------------
+[[32606,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 1000
+Probabilities Each: 1000
+Number of Workers: 1
+[hartmanis:28184] 1 more process has sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:28184] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+runtime: 38.486135
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpirun -np 3 fire
+--------------------------------------------------------------------------
+[[32625,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 1000
+Probabilities Each: 500
+Number of Workers: 2
+[hartmanis:28215] 2 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:28215] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+runtime: 19.238012
+2019kganesha@hartmanis:~/Parallel/ForestFire$ mpirun -np 4 fire; mpirun -np 5 fire; mpirun -np 6 fire; mpirun -np 7 fire; mpirun -np 8 fire; mpirun -np 9 fire; mpirun -np 10 fire; mpirun -np 11 fire; mpirun -np 12 fire;
+--------------------------------------------------------------------------
+[[32522,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 1000
+Probabilities Each: 333
+Number of Workers: 3
+[hartmanis:28236] 3 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:28236] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+runtime: 16.855147
+--------------------------------------------------------------------------
+[[32538,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 1000
+Probabilities Each: 250
+Number of Workers: 4
+[hartmanis:28252] 4 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:28252] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+runtime: 13.824013
+--------------------------------------------------------------------------
+[[32553,1],4]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 1000
+Probabilities Each: 200
+Number of Workers: 5
+[hartmanis:28271] 5 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:28271] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+runtime: 11.337959
+--------------------------------------------------------------------------
+[[32707,1],3]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 1000
+Probabilities Each: 166
+Number of Workers: 6
+[hartmanis:28293] 6 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:28293] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+runtime: 9.259046
+--------------------------------------------------------------------------
+[[32729,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 1000
+Probabilities Each: 142
+Number of Workers: 7
+[hartmanis:28319] 7 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:28319] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+runtime: 8.202421
+--------------------------------------------------------------------------
+[[32765,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 1000
+Probabilities Each: 125
+Number of Workers: 8
+[hartmanis:28347] 8 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:28347] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+runtime: 8.453451
+--------------------------------------------------------------------------
+[[32668,1],4]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 1000
+Probabilities Each: 111
+Number of Workers: 9
+[hartmanis:28378] 9 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:28378] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+runtime: 8.278418
+--------------------------------------------------------------------------
+[[32698,1],7]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 1000
+Probabilities Each: 100
+Number of Workers: 10
+[hartmanis:28412] 10 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:28412] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+runtime: 8.416317
+--------------------------------------------------------------------------
+[[32373,1],5]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: hartmanis
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Total Probabilities: 1000
+Probabilities Each: 90
+Number of Workers: 11
+[hartmanis:28467] 11 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[hartmanis:28467] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+runtime: 7.989353
+2019kganesha@hartmanis:~/Parallel/ForestFire$                                                                                                                                        
+

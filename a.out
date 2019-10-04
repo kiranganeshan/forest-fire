@@ -1,0 +1,5 @@
+a.out: bits.c
+	mpicc bits.c
+
+clean:
+	rm a.out

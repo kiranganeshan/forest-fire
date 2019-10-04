@@ -1,0 +1,4 @@
+localhost slots=4
+hartmanis slots=7
+hopper slots=7
+amdahl slots=7
